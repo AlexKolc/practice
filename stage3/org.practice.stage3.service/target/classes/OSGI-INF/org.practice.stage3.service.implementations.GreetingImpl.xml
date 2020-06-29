@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.practice.stage3.service.implementations.GreetingImpl" activate="activate" deactivate="deactivate">
+    <service servicefactory="false">
+        <provide interface="org.practice.stage3.service.interfaces.Greeting"/>
+    </service>
+    <implementation class="org.practice.stage3.service.implementations.GreetingImpl"/>
+</scr:component>
