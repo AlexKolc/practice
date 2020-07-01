@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.practice.stage3.client.Client" activate="activate" deactivate="deactivate">
-    <reference name="greeting" interface="org.practice.stage3.service.interfaces.Greeting" cardinality="1..1" policy="dynamic" bind="bindGreeting" unbind="unbindGreeting"/>
-    <implementation class="org.practice.stage3.client.Client"/>
-</scr:component>

@@ -6,40 +6,10 @@
 
     <groupId>org.practice</groupId>
     <artifactId>stage3</artifactId>
-
-    <version>1.0.0</version>
-
     <packaging>pom</packaging>
-
+    <version>1.0.0</version>
     <modules>
-        <module>org.practice.stage3.service</module>
-        <module>org.practice.stage3.client</module>
+        <module>service</module>
+        <module>client</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
-            <version>1.12.0</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>maven-bundle-plugin</artifactId>
-                    <version>4.0.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>maven-scr-plugin</artifactId>
-                    <version>1.25.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
 </project>
