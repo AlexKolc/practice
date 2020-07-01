@@ -1,6 +1,6 @@
 package org.practice.stage3.client;
 
-import org.practice.stage3.service.interfaces.Greeting;
+import org.practice.stage3.service.interfaces.Service;
 import org.osgi.service.component.annotations.*;
 
 @Component(
@@ -11,28 +11,28 @@ import org.osgi.service.component.annotations.*;
 public class Client {
     @Reference(
             name = "Service",
-            service = Greeting.class,
+            service = Service.class,
             bind = "bindService",
             unbind = "unbindService"
     )
-    private Greeting greeting;
+    private Service service;
 
-    protected void bindService(Greeting greeting) {
-        this.greeting = greeting;
+    protected void bindService(Service greeting) {
+        this.service = service;
     }
 
-    protected void unbindService(Greeting greeting) {
-        this.greeting = null;
+    protected void unbindService(Service service) {
+        this.service = null;
     }
 
 
     @Activate
     protected void activate() {
         System.out.println("Started Client");
-        if (greeting != null) {
-            greeting.sayHello();
+        if (service != null) {
+            service.sayHello();
         } else {
-            System.out.println("HelloSCRService not found!");
+            System.out.println("Service not found!");
         }
     }
 
