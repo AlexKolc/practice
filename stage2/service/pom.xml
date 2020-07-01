@@ -12,7 +12,7 @@
     <packaging>bundle</packaging>
 
     <groupId>org.practice.stage2</groupId>
-    <artifactId>client</artifactId>
+    <artifactId>service</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.framework -->
@@ -21,12 +21,6 @@
             <artifactId>org.osgi.framework</artifactId>
             <version>1.9.0</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.practice.stage2</groupId>
-            <artifactId>service</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -39,15 +33,12 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Import-Package>org.practice.stage2.service.interfaces, org.osgi.framework; version="1.9.0"</Import-Package>
-                        <Private-Packege>org.practice.stage2.client</Private-Packege>
-                        <Bundle-Activator>org.practice.stage2.client.ClientActivator</Bundle-Activator>
+                        <Export-Package>org.practice.stage2.service.interfaces</Export-Package>
+                        <Private-Package>org.practice.stage2.service.implementations, org.practice.stage2.service.main</Private-Package>
+                        <Bundle-Activator>org.practice.stage2.main.ServiceActivator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
-
-<!--        C:/Users/Alex/Desktop/studies/6semestr/practice/stage2/service/target/service-1.0.0.jar-->
-<!--        C:/Users/Alex/Desktop/studies/6semestr/practice/stage2/client/target/client-1.0.0.jar-->
