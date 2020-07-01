@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="OSGi Core API" type="org.osgi.core">
-    <CLASSES>
-      <root url="jar://D:/felix-framework-6.0.3/bin/felix.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
